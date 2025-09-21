@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo Animation CSS</title>
+    <style>
+      /* Animation slide qua lại */
+      @keyframes chay-ngang {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(200px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      /* Animation xoay vòng */
+      @keyframes xoay {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #1279ce;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background: rgb(153, 31, 9);
+        border-radius: 10px;
+        animation: chay-ngang 3s ease-in-out infinite;
+        margin-bottom: 50px;
+      }
+
+      .loader {
+        width: 60px;
+        height: 60px;
+        border: 6px solid #ccc;
+        border-top: 6px solid blue;
+        border-radius: 50%;
+        animation: xoay 1s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demo CSS Animation</h1>
+
+    <!-- Ô vuông chạy qua lại -->
+    <div class="box"></div>
+
+    <!-- Loader xoay vòng -->
+    <div class="loader"></div>
+  </body>
+</html>
